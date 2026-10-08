@@ -49,20 +49,7 @@ function App() {
         setAge(student.age);
       };
 
-  const updateStudent= async () =>{
-    await axios.put(`http://localhost:5000/students/${editingId}`,{
-      name,
-      course,
-      age,
-    });
-
-    const response = await axios.get ("http://localhost:5000/students");
-    setStudents(response.data);
-    setEditingId(null);
-    setName("");
-    setCourse("");
-    setAge("");
-  };
+  
 
 
   return (
